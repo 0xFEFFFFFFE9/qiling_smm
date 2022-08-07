@@ -10,7 +10,7 @@ class QlLoaderSMM(QlLoader):
         profile = ql.profile
         ql.smram_base = profile.getint("SMM", "smram_base")
         ql.smram_size = profile.getint("SMM", "smram_size")
-        ql.smi_offset = profile.getint("CPU", "SMI_OFFSET")
+        ql.smi_offset = profile.getint("CPU", "SMBASE")
         ql.smi_base = ql.smram_base + ql.smi_offset
         
         self.ql = ql
